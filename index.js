@@ -32,7 +32,9 @@ app.use(cors({
     
 }));
 
-
+app.get("/", (req, res) => {
+    res.send("Welcome to ChatConnect");
+  });
 
 app.use('/api',authRoutes);
 app.use('/api', userRoutes);
